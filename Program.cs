@@ -7,23 +7,35 @@ namespace KoszykKonsola
 {
     class Program
     {
-        public string haslo { get; private set; }
-        public string SprawdzHaslo(string Haslo)
+        
+        class Haslo
         {
-            Haslo="123456";
-            haslo = Haslo;
-            return haslo;
+            public int haslo { get;  set; }
+            public int SprawdzHaslo(int nhaslo)
+            {
+               
+                haslo = nhaslo;
+               return haslo;
+            }
         }
+       
 
-        static void Main(string[] args)
+        static void Main()
         {
+           // public string haslo{get;private set;}
             #region Zmienne
             int menu=0;
-            string phaslo;
+            int phaslo;
             #endregion
-           
-            #region Acesory
             
+         
+            #region Acesory
+             
+          
+            #endregion
+            #region konstruktor
+            Haslo admin = new Haslo();
+            admin.haslo = 123456;
             #endregion
 
             Console.WriteLine("Wybierz pozycje z menu: ");
@@ -39,13 +51,17 @@ namespace KoszykKonsola
             {
                 case 1:
                       Console.WriteLine("Witaj sprawdzimy czy jesteś administratorem. Podaj hasło: ");
-                      phaslo = Console.ReadLine();
-                      if (true)
+                      phaslo = int.Parse(Console.ReadLine());
+                      if (phaslo==admin.haslo)
                       {
-                          //Console.WriteLine("Witaj Administratorze. ");
+                          Console.WriteLine("Witaj Administratorze. ");
                           //Console.WriteLine(" 1) Dodaj produkt ");
                           //Console.WriteLine(" 2)
 
+                      }
+                      else
+                      {
+                          Console.WriteLine("Nie jesteś adminem ");
                       }
                     break;
                 case 2:
