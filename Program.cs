@@ -18,7 +18,33 @@ namespace KoszykKonsola
                return haslo;
             }
         }
-       
+      //  Klasa Budziki, posiada pola cena i nazwa. Metode DodajPromocje.
+        class Budziki
+        {
+            public int cena { get; set; }
+            public string nazwa { get; set; }
+            public int ilosc { get; set; }
+
+            public int DodajPromocje(int Ncena)
+            {
+                Ncena = int.Parse(Console.ReadLine());
+                cena = Ncena;
+                return Ncena;
+            }
+
+            public Budziki(int ncena, string nnazwa,int nilosc)
+            {
+                cena = ncena;
+                nazwa = nnazwa;
+                ilosc = nilosc;
+            }
+
+        }
+        //class Promocje
+        //{
+        //    //cena
+        //    //
+        //}
 
         static void Main()
         {
@@ -26,6 +52,10 @@ namespace KoszykKonsola
             #region Zmienne
             int menu=0;
             int phaslo;
+            string menuadmin;
+            string produktdodaj; //potrzebna do PA
+            int cenaproduktu; //potrzebne do PA
+            int iloscproduktow; //potrzebne do PA
             #endregion
             
          
@@ -33,9 +63,15 @@ namespace KoszykKonsola
              
           
             #endregion
+
             #region konstruktor
             Haslo admin = new Haslo();
             admin.haslo = 123456;
+            
+            #endregion
+
+            #region ListaProduktow
+            List<Budziki> budzki=new List<Budziki>();
             #endregion
 
             Console.WriteLine("Wybierz pozycje z menu: ");
@@ -55,8 +91,45 @@ namespace KoszykKonsola
                       if (phaslo==admin.haslo)
                       {
                           Console.WriteLine("Witaj Administratorze. ");
-                          //Console.WriteLine(" 1) Dodaj produkt ");
+                          Console.WriteLine(" d) Dodaj produkt ");
+                          Console.WriteLine(" u) dodaj promocje ");
+                          
+
+                          menuadmin = Console.ReadLine();
+
+                          switch (menuadmin)
+                          {
+                              case "d":
+                                  Console.WriteLine("Jaki produkt chcesz dodać ( podaj nazwe ): ");
+                                  produktdodaj = Console.ReadLine();
+                                  Console.WriteLine("Podaj cene tego produktu: ");
+                                  cenaproduktu=int.Parse(Console.ReadLine());
+                                  Console.WriteLine("Podaj ilosc produktow: ");
+                                  iloscproduktow = int.Parse(Console.ReadLine());
+
+                                  budzki.Add(new Budziki(cenaproduktu,produktdodaj,iloscproduktow));
+                                  //Console.WriteLine("Dodałeś " + budzki);
+                                  Console.ReadKey();
+                                  
+                                  
+                                  break;
+                              case "u":
+                                  Console.WriteLine(" Jaką chcesz dodać promocje: ");
+                                  //
+                                  //
+                                  //
+                                
+                                  break;
+
+
+                             
+
+                          }
+
+
                           //Console.WriteLine(" 2)
+
+
 
                       }
                       else
@@ -65,7 +138,8 @@ namespace KoszykKonsola
                       }
                     break;
                 case 2:
-
+                    Console.WriteLine(" Witaj w sklepiej. Wybierze menu ");
+                   // Console.WriteLine(" 
                     break;
                 case 3:
                     
