@@ -18,16 +18,12 @@ namespace ClockAlarmStore
         [Test]
         public void ShopItemMethodTest()
         {
-            var id = 1;
-         //   ShopItem item = new ShopItem(id);
 
-            //int result= cart.AddItem(id);
+            int testId = 1;
+            ShopItem item = new ShopItem(testId);
 
-           // Assert.AreEqual(1,item.Id);
+            Assert.AreEqual(1, item.Id);
 
-            Cart cart=new Cart();
-            Assert.AreEqual(1,cart.AddItem(id));
-         //  Assert.AreEqual(1,cart.Items.);
         }
 
 

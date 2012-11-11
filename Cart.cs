@@ -7,8 +7,12 @@ namespace ClockAlarmStore
 {
     class Cart
     {
-        public List<ShopItem> Items = new List<ShopItem>();
-
+        public List<ShopItem> Items = new List<ShopItem>(); // lista produktow
+                                                            // 
+        /// <summary>
+        /// tworzymy nowy obiekt newItem, 
+        /// </summary>
+        /// <param name="id"></param>
         public void AddItem(int id)
         {
             ShopItem newItem = new ShopItem(id);
@@ -30,6 +34,23 @@ namespace ClockAlarmStore
      
            
         }
+        public void SetItemAmount(int id, int amount)
+        {
+            if (amount==0)
+            {
+                RemoveItem(id);
+            }
+            CartItem updateItem = new CartItem();
+            foreach (CartItem item in Items)
+            {
+                if (item.Equals(updateItem))
+                {
+                    item.Amount=amount;
+                }
+
+            }
+
+        }
         public void RemoveItem(int id)
         {
             ShopItem shopItemRemove = new ShopItem(id);
@@ -38,3 +59,4 @@ namespace ClockAlarmStore
         }
     }
 }
+

@@ -15,10 +15,22 @@ namespace ClockAlarmStore
         //    get { return id; }
         //    set {id=value }
         //}
-        public int Id { get; set; }
+        public int Id
+        {
+            get
+            {
+                return id;
+            }
+            set
+            {
+                // To ensure that the Prod object will be re-created  
+                id = null;
+                id = value;
+            }  
+        }
         public int Price
         {
-            get { return id; }
+            get { return price; }
             set { price = value; }
         }
           
@@ -27,14 +39,14 @@ namespace ClockAlarmStore
             get { return amountItem; }
             set { amountItem = value; }
         }
-
+        
         private int id;
         private int price;
         private int amountItem;
 
-        public ShopItem(int id)
+        public ShopItem(int nId)
         {
-            Id = id;
+            this.Id = nId;
 
         }
 
