@@ -10,11 +10,12 @@ namespace ClockAlarmStore
         /// <summary>
         /// Oddzielenie "logika" przedmiotu, od sklepu
         /// </summary>
-        public int Id
-        {
-            get { return id; }
-            set { id = value; }
-        }
+        //public int Id
+        //{
+        //    get { return id; }
+        //    set {id=value }
+        //}
+        public int Id { get; set; }
         public int Price
         {
             get { return id; }
@@ -33,6 +34,7 @@ namespace ClockAlarmStore
 
         public ShopItem(int id)
         {
+            Id = id;
 
         }
 
