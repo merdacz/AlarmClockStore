@@ -37,6 +37,15 @@ namespace ClockAlarmStore
             //  Assert.AreEqual(1, item.Id);
 
         }
+        [Test]
+        public void RemoveMethodTest()
+        {
+            int id = 1;
+            Cart cart=new Cart();
+            
+            cart.RemoveItem(id);
+            Assert.AreEqual(0,cart.Items.Count);
+        }
 
 
     }
