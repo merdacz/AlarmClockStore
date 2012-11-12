@@ -18,11 +18,12 @@ namespace ClockAlarmStore
             ShopItem newItem = new ShopItem(id);
             if(Items.Contains(newItem))
             {
-                foreach (var shopItem in Items)
+                foreach (ShopItem shopItem in Items)
                 {
                     if(shopItem.Equals(newItem))
                     {
                         shopItem.AmountItem++;
+                        
                     }
                     else
                     {

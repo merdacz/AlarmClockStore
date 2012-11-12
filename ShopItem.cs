@@ -23,8 +23,8 @@ namespace ClockAlarmStore
             }
             set
             {
-                // To ensure that the Prod object will be re-created  
-                id = null;
+                
+                
                 id = value;
             }  
         }
