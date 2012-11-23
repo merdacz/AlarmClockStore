@@ -39,7 +39,19 @@ namespace ClockAlarmStore
             get { return amountItem; }
             set { amountItem = value; }
         }
-        
+        public int Promotion
+        {
+            get
+            {
+                return promotion;
+
+            }
+            set
+            {
+                promotion = value;
+            }
+        }
+        private int promotion;
         private int id;
         private int price;
         private int amountItem;
