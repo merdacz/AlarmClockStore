@@ -15,6 +15,7 @@ namespace ClockAlarmStore
         //    get { return id; }
         //    set {id=value }
         //}
+      
         public int Id
         {
             get
@@ -43,15 +44,16 @@ namespace ClockAlarmStore
         {
             get
             {
-                return promotion;
+                return price;
 
             }
             set
             {
-                promotion = value;
+                Price = Price - (Price / 10);
             }
         }
-        private int promotion;
+      
+       // private int promotion;
         private int id;
         private int price;
         private int amountItem;
@@ -59,7 +61,10 @@ namespace ClockAlarmStore
         public ShopItem(int nId)
         {
             this.Id = nId;
-
+            this.Price = 100;
+            this.Promotion;
+            this.amountItem++;
+            
         }
 
     }
