@@ -95,7 +95,11 @@ namespace ClockAlarmStore
                 Assert.AreEqual(5, shopItem.Id);
                 Assert.AreEqual(10, cart.Items.Count);
               //  shopItem.Price = 100;
-                Assert.AreEqual(90, shopItem.PromotionPrice);
+                //shopItem.PromotionPrice;
+               // Assert.AreEqual(90,shopItem.PromotionPrice);
+               // cart.GetPromotion();
+                shopItem.GetPromotion(cart);
+                Assert.AreEqual(90,cart.Items[1].PromotionPrice );
             }
           
 
