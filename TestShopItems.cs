@@ -31,33 +31,21 @@ namespace ClockAlarmStore
         [Test]
         public void AddMethodTest()
         {
-         // int id = 1;
-            //int idq = 2;
-           // Cart cart=new Cart();
-            
-          //  Cart carta=new Cart();
-           // ShopItem qwe=new ShopItem(id);
+         
            
             int testId = 1;
             int testqId = 2;
             ShopItem item = new ShopItem(testId);
 
-            //ShopItem item2 = new ShopItem(testqId);
-            //ShopItem item3 = new ShopItem(4);
-            //cart.AddItem(item);
-         //   cart.AddItem(item2);
-            //cart.AddItem(item);
-            //cart.AddItem(item2);
-            //cart.AddItem(item3);
-            //int licznik = Items.Count;
+            
             Cart cart = new Cart();
             cart.AddItem(testId);
             cart.AddItem(testqId);
            Assert.AreEqual(2,cart.Items.Count);
-        //   Assert.AreEqual(2, item.AmountItems);
+        
            Assert.AreEqual(100, item.Price);
 
-            //  Assert.AreEqual(1, item.Id);
+            
 
         }
         [Test]
@@ -88,18 +76,16 @@ namespace ClockAlarmStore
             cart.AddItem(1);
             if (cart.Items.Count==10)
             {
-             
 
 
 
+                
                 Assert.AreEqual(5, shopItem.Id);
                 Assert.AreEqual(10, cart.Items.Count);
-              //  shopItem.Price = 100;
-                //shopItem.PromotionPrice;
-               // Assert.AreEqual(90,shopItem.PromotionPrice);
-               // cart.GetPromotion();
                 shopItem.GetPromotion(cart);
                 Assert.AreEqual(90,cart.Items[1].PromotionPrice );
+                Assert.AreEqual(180,cart.Items[0].PromotionPrice+cart.Items[1].PromotionPrice);
+                Assert.AreEqual(900,cart.GetPriceTotal());
             }
           
 
