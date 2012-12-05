@@ -1,0 +1,9 @@
+c:\Users\micha_000\Documents\Visual Studio 2012\Projects\AlarmClockStore\AlarmClockStore.Test\bin\Debug\AlarmClockStore.Test.dll
+c:\Users\micha_000\Documents\Visual Studio 2012\Projects\AlarmClockStore\AlarmClockStore.Test\bin\Debug\AlarmClockStore.Test.pdb
+c:\Users\micha_000\Documents\Visual Studio 2012\Projects\AlarmClockStore\AlarmClockStore.Test\bin\Debug\nunit.framework.dll
+c:\Users\micha_000\Documents\Visual Studio 2012\Projects\AlarmClockStore\AlarmClockStore.Test\bin\Debug\nunit.framework.xml
+c:\Users\micha_000\Documents\Visual Studio 2012\Projects\AlarmClockStore\AlarmClockStore.Test\obj\Debug\AlarmClockStore.Test.csprojResolveAssemblyReference.cache
+c:\Users\micha_000\Documents\Visual Studio 2012\Projects\AlarmClockStore\AlarmClockStore.Test\obj\Debug\AlarmClockStore.Test.dll
+c:\Users\micha_000\Documents\Visual Studio 2012\Projects\AlarmClockStore\AlarmClockStore.Test\obj\Debug\AlarmClockStore.Test.pdb
+c:\Users\micha_000\Documents\Visual Studio 2012\Projects\AlarmClockStore\AlarmClockStore.Test\bin\Debug\AlarmClockStore.Logic.exe
+c:\Users\micha_000\Documents\Visual Studio 2012\Projects\AlarmClockStore\AlarmClockStore.Test\bin\Debug\AlarmClockStore.Logic.pdb
