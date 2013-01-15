@@ -1,31 +1,27 @@
-﻿using System.Collections.Generic;
-namespace AlarmClockStore.Logic
+﻿namespace AlarmClockStore.Logic
 {
-    
+    using System;
+    using System.Collections.Generic;
 
     public class Cart
     {
-       
-        private Dictionary<string, int> itemsCart = new Dictionary<string, int>();
+        private List<int> amountCartItems = new List<int>();
 
-        public Dictionary<string, int> ItemsCartGet
+        private List<CartItem> cartItemsList = new List<CartItem>();
+
+        private Dictionary<string, int> itemsCartList = new Dictionary<string, int>();
+
+        private List<string> nameCartItems = new List<string>();
+
+        public Dictionary<string, int> ItemsCartListSet
         {
             get
             {
-                return this.itemsCart;
+                return this.itemsCartList;
             }
-        }
-
-        public Dictionary<string, int> ItemsCartSet
-        {
-            get
-            {
-                return this.itemsCart;
-            }
-
             set
             {
-                this.itemsCart = value;
+                this.itemsCartList = value;
             }
         }
 
@@ -33,55 +29,52 @@ namespace AlarmClockStore.Logic
 
         public decimal SubTotal { get; set; }
 
-        public void Add(string product, int amount)
+        public void Add(string product, int amount, ref Store store)
         {
-            var helper = new Store();
-            var listNumber = new List<ShopItem>(helper.ItemsGet.Values);
-            for (int i = 0; i < listNumber.Count; i++)
+            if (product == null)
             {
-                if (listNumber[i].NameProduct == product)
-                {
-                    this.ItemsCartSet.Add(product, amount);
-                }
+                throw new ArgumentNullException("product");
+            }
+            if (store.ItemsGet.ContainsKey(product))
+            {
+                this.ItemsCartListSet.Add(product, amount);
             }
         }
 
-        public decimal CalculateTotal()
+        public decimal CalculateTotal(ref Store store)
         {
-            int keys = 0;
-            decimal priceAll = 0;
-            this.PriceProducts = 0;
-            var store = new Store();
-            foreach (var itemCart in this.ItemsCartGet)
+            decimal helpers = 0;
+            for (var i = 0; i < store.ItemsGet.Count; i++)
             {
-                keys += itemCart.Value;
-
-                foreach (var itemAll in store.ItemsGet)
+                foreach (var item in store.ItemsGet)
                 {
-                    if (this.ItemsCartSet.ContainsKey(itemAll.Value.NameProduct))
+                    foreach (var cartItemName in this.ItemsCartListSet.Keys)
                     {
-                        this.PriceProducts = keys * itemAll.Value.Price;
-                        return this.PriceProducts;
+                        if (item.Key == cartItemName)
+                        {
+                            if (store.ItemsGet.ContainsKey(item.Key))
+                            {
+                                decimal helperStore = store.ItemsGet[item.Key].Price;
+                                int helperCart = this.ItemsCartListSet[cartItemName];
+                                this.PriceProducts += helperCart * helperStore;
+                                helpers = this.PriceProducts;
+                                return this.PriceProducts;
+                            }
+                        }
                     }
+                    return helpers;
                 }
-
-                return this.PriceProducts;
+                return helpers;
             }
-
-            return this.PriceProducts;
+            return helpers;
         }
 
         public void MakeOrder()
         {
         }
 
-        public void Remove(int id, string product)
+        public void Remove(string productName, int amount)
         {
-            var helper = new Store();
-            if (helper.ItemsGet.ContainsKey(id))
-            {
-                this.ItemsCartSet.Remove(product);
-            }
         }
 
     }

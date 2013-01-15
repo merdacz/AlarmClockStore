@@ -1,18 +1,29 @@
-﻿using System.Collections.Generic;
-namespace AlarmClockStore.Logic
+﻿namespace AlarmClockStore.Logic
 {
-    public class Store
-    {
-        private Dictionary<int, ShopItem> itemsList = new Dictionary<int, ShopItem>();
+    using System;
+    using System.Collections.Generic;
 
-        public Dictionary<int, ShopItem> ItemsGet
+    public class Store : IProductReferenceProvider
+    {
+        #region Fields
+
+        private readonly List<string> nameProducts = new List<string>();
+
+        private Dictionary<string, ShopItem> itemsList = new Dictionary<string, ShopItem>();
+
+        #endregion
+
+        #region Public Properties
+
+        public Dictionary<string, ShopItem> ItemsGet
         {
             get
             {
                 return this.itemsList;
             }
         }
-        public Dictionary<int, ShopItem> ItemsSet
+
+        public Dictionary<string, ShopItem> ItemsSet
         {
             get
             {
@@ -25,9 +36,29 @@ namespace AlarmClockStore.Logic
             }
         }
 
-        public void AddProduct(int id, string nameProduct, decimal price, int amountProduct)
+        public List<string> NameProducts
         {
-            this.ItemsSet.Add(id, new ShopItem(nameProduct, price, amountProduct));
+            get
+            {
+                return this.nameProducts;
+            }
+        }
+
+        #endregion
+
+        #region Public Methods and Operators
+
+        public void AddProduct(string nameProduct, int id, decimal price, int amountProduct)
+        {
+            if (this.ItemsSet.ContainsKey(nameProduct))
+            {
+                throw new Exception("Bug");
+            }
+            else
+            {
+                this.ItemsSet.Add(nameProduct, new ShopItem(id, price, amountProduct));
+                this.nameProducts.Add(nameProduct);
+            }
         }
 
         public Cart CreateCart()
@@ -35,13 +66,26 @@ namespace AlarmClockStore.Logic
             return new Cart();
         }
 
-        public void RegisterDiscountPromotion(ShopItem item, int amountProduct, int rabat)
+        public object GetProductReference(string nameProduct)
+        {
+            //nie miałem pomysłu
+            if (this.ItemsGet.ContainsKey(nameProduct))
+            {
+                return this.ItemsGet[nameProduct];
+            }
+
+            object nullObject;
+            nullObject = null;
+            return nullObject;
+        }
+
+        public void RegisterDiscountPromotion(ShopItem item, int amountProduct, int discount)
         {
         }
 
-        public void RemoveProduct(int id)
+        public void RemoveProduct(string nameProduct)
         {
-            this.ItemsSet.Remove(id);
+            this.ItemsSet.Remove(nameProduct);
         }
 
         public List<ShopItem> ValuesMethod()
@@ -49,5 +93,6 @@ namespace AlarmClockStore.Logic
             return new List<ShopItem>(this.ItemsGet.Values);
         }
 
+        #endregion
     }
 }

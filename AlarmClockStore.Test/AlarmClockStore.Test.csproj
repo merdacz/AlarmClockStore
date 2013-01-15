@@ -43,10 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassMain.cs" />
-    <Compile Include="..\..\..\..\..\..\..\GitHub\AlarmClockStore\TestAlarmLogic.cs">
-      <Link>TestAlarmLogic.cs</Link>
+    <Compile Include="..\..\..\..\..\..\..\GitHub\AlarmClockStore\TestsAlarmLogic.cs">
+      <Link>TestsAlarmLogic.cs</Link>
     </Compile>
+    <Compile Include="ClassMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

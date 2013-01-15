@@ -1,24 +1,20 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace AlarmClockStore.Logic
+﻿namespace AlarmClockStore.Logic
 {
     public class ShopItem
     {
-        public ShopItem(string nameProduct, decimal price, int amountProduct)
+       
+        public ShopItem(int id, decimal price, int amountProduct)
         {
-            this.NameProduct = nameProduct;
             this.Price = price;
             this.Amount = amountProduct;
+            this.Id = id;
         }
 
         public int Amount { get; set; }
 
-        public string NameProduct { get; set; }
+        public int Id { get; set; }
 
-        public decimal Price { get; set; }      
+        public decimal Price { get; set; }
+
     }
 }

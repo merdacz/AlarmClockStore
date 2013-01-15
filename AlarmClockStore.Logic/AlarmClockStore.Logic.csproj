@@ -41,10 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cart.cs" />
     <Compile Include="..\..\..\..\..\..\..\GitHub\AlarmClockStore\ClassMain.cs">
       <Link>ClassMain.cs</Link>
     </Compile>
+    <Compile Include="..\..\..\..\..\..\..\GitHub\AlarmClockStore\Cart.cs">
+      <Link>Cart.cs</Link>
+    </Compile>
+    <Compile Include="CartItem.cs" />
+    <Compile Include="IProductReferenceProvider.cs" />
+    <Compile Include="ProductRef.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShopItem.cs" />
     <Compile Include="Store.cs" />

@@ -14,12 +14,15 @@
         {
             var store = new Store();
             store.AddProduct("casio", 1, 120, 5);
-            store.AddProduct("CasioGShock", 2, 890, 3);
             Cart cart = new Store().CreateCart();
+
+            store.AddProduct("CasioGShock", 2, 450, 2);
             cart.Add("casio", 2, ref store);
-            cart.Add("CasioGShock", 2, ref store);
-            // Assert.AreEqual(2, cart.ListCartItemsSet.Count);
-            Assert.AreEqual(2, cart.ItemsCartListSet.Count);
+            cart.Add("casio", 2, ref store);
+            cart.Add("casiooo", 4, ref store);
+
+            // Assert.AreEqual(2, cart.ItemsCartGet.Values.Count);
+            Assert.AreEqual(2, cart.ListCartItemsSet.Count);
         }
 
         [Test]
@@ -30,8 +33,6 @@
             Cart cart = new Store().CreateCart();
             store.AddProduct("CasioGShock", 2, 450, 2);
             cart.Add("casio", 2, ref store);
-            cart.CalculateTotal(ref store);
-            Assert.AreEqual(240, cart.PriceProducts);
         }
 
         [Test]
@@ -39,6 +40,18 @@
         {
             Cart cart = new Store().CreateCart();
             Assert.IsNotNull(cart);
+        }
+
+        [Test]
+        public void TestRefMethod()
+        {
+            var store = new Store();
+            store.AddProduct("casio", 1, 1201, 1);
+            Cart cart = store.CreateCart();
+            cart.Add("aaa", 2, ref store);
+            Assert.AreEqual(cart.ItemsCartGet.ContainsKey("aaa"), true);
+
+
         }
 
         [Test]
@@ -59,11 +72,11 @@
             Cart cart = new Store().CreateCart();
             store.AddProduct("CasioGShock", 2, 450, 2);
 
-            cart.Add("casio", 4, ref store);
+            cart.Add("casio", 2, ref store);
             cart.Add("CasioGShock", 2, ref store);
             cart.Remove("casio", 2);
-            //Assert.AreEqual(2, cart.ListCartItemsSet.Count);
-            Assert.AreEqual(2, cart.ItemsCartListSet.Count);
+            cart.Add("casio", 2, ref store);
+            Assert.AreEqual(2, cart.ListCartItemsSet.Count);
         }
 
         #endregion

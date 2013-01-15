@@ -58,10 +58,9 @@ namespace AlarmClockStore.Test
             var cart = new Store().CreateCart();
             store.AddProduct("CasioGShock", 450, 2);
 
-            cart.Add("casio", 2);
-            cart.Add("CasioGShock", 2);
+            cart.ItemsCartSet.Add("casio", 2);
+            cart.ItemsCartSet.Add("CasioGShock", 2);
             cart.Remove("casio");
-            
             
             Assert.AreEqual(2,cart.ItemsCartSet.Count);
         }
