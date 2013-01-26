@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlarmClockStore", "AlarmClockStore\AlarmClockStore.csproj", "{288EB6C0-1107-4F61-BACE-8032B240F974}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlarmClockStore", "AlarmClockStore\AlarmClockStore.csproj", "{7FF1FE55-259B-4366-A1F1-CB5A5B7AB085}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlarmClockStore.Logic", "AlarmClockStore.Logic\AlarmClockStore.Logic.csproj", "{42E79A39-990F-48CC-9553-51CBE9689DA0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlarmClockStore.Logic", "AlarmClockStoreLogic\AlarmClockStore.Logic.csproj", "{0392C8EF-13F1-4882-B464-1FC9A9E44FE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlarmClockStore.Test", "AlarmClockStore.Test\AlarmClockStore.Test.csproj", "{F0A8812C-9B5E-4468-A66D-C36CB7EF4EB3}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{18A38BCB-4FAA-42F2-907B-FDBB48B14FA5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlarmClockStore.Test", "AlarmClockStore.Test\AlarmClockStore.Test.csproj", "{DABBCBD2-E67D-4FCA-89EB-0E00E1E1C428}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +13,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{288EB6C0-1107-4F61-BACE-8032B240F974}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{288EB6C0-1107-4F61-BACE-8032B240F974}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{288EB6C0-1107-4F61-BACE-8032B240F974}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{288EB6C0-1107-4F61-BACE-8032B240F974}.Release|Any CPU.Build.0 = Release|Any CPU
-		{42E79A39-990F-48CC-9553-51CBE9689DA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{42E79A39-990F-48CC-9553-51CBE9689DA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{42E79A39-990F-48CC-9553-51CBE9689DA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{42E79A39-990F-48CC-9553-51CBE9689DA0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F0A8812C-9B5E-4468-A66D-C36CB7EF4EB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F0A8812C-9B5E-4468-A66D-C36CB7EF4EB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F0A8812C-9B5E-4468-A66D-C36CB7EF4EB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F0A8812C-9B5E-4468-A66D-C36CB7EF4EB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FF1FE55-259B-4366-A1F1-CB5A5B7AB085}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FF1FE55-259B-4366-A1F1-CB5A5B7AB085}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FF1FE55-259B-4366-A1F1-CB5A5B7AB085}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FF1FE55-259B-4366-A1F1-CB5A5B7AB085}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0392C8EF-13F1-4882-B464-1FC9A9E44FE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0392C8EF-13F1-4882-B464-1FC9A9E44FE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0392C8EF-13F1-4882-B464-1FC9A9E44FE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0392C8EF-13F1-4882-B464-1FC9A9E44FE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DABBCBD2-E67D-4FCA-89EB-0E00E1E1C428}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DABBCBD2-E67D-4FCA-89EB-0E00E1E1C428}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DABBCBD2-E67D-4FCA-89EB-0E00E1E1C428}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DABBCBD2-E67D-4FCA-89EB-0E00E1E1C428}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

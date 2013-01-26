@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7FF1FE55-259B-4366-A1F1-CB5A5B7AB085}</ProjectGuid>
+    <ProjectGuid>{0392C8EF-13F1-4882-B464-1FC9A9E44FE6}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AlarmClockStore</RootNamespace>
-    <AssemblyName>AlarmClockStore</AssemblyName>
+    <RootNamespace>AlarmClockStoreLogic</RootNamespace>
+    <AssemblyName>AlarmClockStoreLogic</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,8 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cart.cs" />
+    <Compile Include="CartItem.cs" />
+    <Compile Include="ICart.cs" />
+    <Compile Include="ProductSummary.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShopItem.cs" />
+    <Compile Include="Store.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

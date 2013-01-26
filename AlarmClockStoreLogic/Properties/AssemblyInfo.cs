@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyTitle("AlarmClockStore")]
+[assembly: AssemblyTitle("AlarmClockStoreLogic")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("AlarmClockStore")]
+[assembly: AssemblyProduct("AlarmClockStoreLogic")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -22,7 +22,7 @@ using System.Runtime.InteropServices;
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 
-[assembly: Guid("8c7be531-b948-491a-9461-f2e8937bcdc2")]
+[assembly: Guid("0550e190-ea80-42a2-86ef-6171dea19320")]
 
 // Version information for an assembly consists of the following four values:
 //
